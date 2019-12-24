@@ -24,3 +24,9 @@ def login(request):
     user = authenticate(username=username, password=password)
     login(request, user)
     return Response({"data": "invalid credentials"})
+
+
+
+@api_view(["GET","POST"])
+def testing(request):
+    return render(request,"accounts/home.html")
